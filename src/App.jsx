@@ -3,12 +3,16 @@
 import './App.css'
 import Header from './components/Header';
 import Catalogo from './components/Catalogo';
+import Album from './components/Album';
+import Botones from './components/Botones';
 
 function App() {
   return (
     <div>
     <Header />
     <Catalogo />
+    <Album />
+    <Botones />
     </div>
   
   );
