@@ -1,0 +1,44 @@
+.logo{
+    width: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.header{
+    background-color: #282828;
+    width: 410px;
+    height: 960px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    
+    
+}
+.containerLogo{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #FFF;
+}
+
+nav{
+    background-color: #646262;
+    color: black;
+    width: 360px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 30px;
+    
+}
+
+nav a{
+    display: flex;
+    margin-left: 25px;
+    gap: 30px;
+    text-decoration: none;
+    color: black;
+}
