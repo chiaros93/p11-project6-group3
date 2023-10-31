@@ -1,4 +1,4 @@
-import Logo from '../assets/Fenix.jpg'
+import Logo from '../assets/Fenix.png'
 import './Header.css'
 
 function Header(){
