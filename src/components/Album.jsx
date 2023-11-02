@@ -1,4 +1,4 @@
-
+import Catalogo from "./Catalogo";
 
 function Album({title = 'Nombre del album', description = 'Nombre del artista'}) {
     return (

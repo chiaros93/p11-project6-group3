@@ -12,6 +12,11 @@ a .btn1{
   text-decoration: none;
   flex-direction: column;
 }
+
+#texto{
+  color: aqua;
+}
+
 a .btn1:hover{
   color: rgb(255, 205, 232);
   transition: 0.3s;
