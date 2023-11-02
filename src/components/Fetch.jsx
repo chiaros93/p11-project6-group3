@@ -1,6 +1,6 @@
 const respuesta = document.getElementById('texto');
 
-const url = 'https://spotify23.p.rapidapi.com/albums/?ids=3IBcauSj5M2A6lTeffJzdv';
+const url = 'https://spotify23.p.rapidapi.com/search/?q=album&type=albums&offset=0&limit=10&numberOfTopResults=5';
 const options = {
 	method: 'GET',
 	headers: {
@@ -13,7 +13,7 @@ let albums = [];
 
 try {
     const response = await fetch(url, options);
-    const results = await response.text();
+    const results = await response.json();
     
     console.log(results);
 } catch (error) {
@@ -22,9 +22,10 @@ try {
 
 
 function Fetchorias(){
+
     return(
         <div id="texto">
-            
+
         </div>
     );
 }
