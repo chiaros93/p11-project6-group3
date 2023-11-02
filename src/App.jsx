@@ -2,13 +2,13 @@
 
 import './App.css'
 import Header from './components/Header';
-import Catalogo from './components/Catalogo';
+import Fetchorias from './components/Fetch';
 
 function App() {
   return (
     <div>
     <Header />
-    <Catalogo />
+    <Fetchorias />
     </div>
   
   );
