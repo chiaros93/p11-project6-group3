@@ -1,0 +1,33 @@
+#ftr{    
+    display: flex;
+    min-height: 53vh;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.container-links-legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.container-links-legal a {
+    text-decoration: none;
+    color: #4e1a00;
+    font-size: 0.7em;
+}
+
+.btn-language{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    font-size: 0.8em;
+    color: #4e1a00;
+}
+
+#Global{
+    margin-right: 10px;
+}

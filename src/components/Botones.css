@@ -1,0 +1,58 @@
+.botones {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    align-items: normal;
+    margin-top: 10px;
+}
+
+.registrarte {
+    background: none;
+    border: none;
+    font-size: 25px;
+    margin: 20px;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+#btn1{
+    color: white;
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+}
+#btn1:hover{
+    color: rgb(255, 205, 232);
+}
+.iniciar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(255, 205, 232);
+    border: none;
+    border-radius: 22px; 
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    width: 210px;
+    height: 50px;
+    margin: 10px;
+}
+#btn{
+    color: #ff8214;
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+}
+#btn:hover{
+    color: white;
+    transition: 0.3s;
+}
+.iniciar:hover {
+    background: #fff193;
+    box-shadow: 0 0 10px #fff193, 0 0 20px #fff193, 0 0 60px #fff193;
+    transition: 0.8s;
+}

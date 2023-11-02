@@ -2,13 +2,17 @@
 
 import './App.css'
 import Header from './components/Header';
-import Catalogo from './components/Catalogo';
+import Fetchorias from './components/Fetch';
+import Album from './components/Album';
+import Botones from './components/Botones';
 
 function App() {
   return (
     <div>
     <Header />
-    <Catalogo />
+    <Fetchorias />
+    <Album />
+    <Botones />
     </div>
   
   );

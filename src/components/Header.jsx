@@ -1,5 +1,6 @@
 import Logo from '../assets/Fenix.png'
 import './Header.css'
+import Footer from './Footer';
 
 function Header(){
     return(
@@ -24,13 +25,10 @@ function Header(){
                 Buscar
                 </a>
             </nav>
+            <Footer/>
         </div>
+        
     );
 }
-
-
-
-
-
 
 export default Header;
