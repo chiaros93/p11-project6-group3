@@ -1,7 +1,7 @@
 import '../components/Footer.css'
 
 function Footer() {
-  return (
+	return (
     <div id='ftr'>
 				<div className="container-links-legal">
 					<a href="https://www.spotify.com/ec/legal/">Legal</a>
@@ -20,6 +20,6 @@ function Footer() {
 	</div>
     
     );
-  }
-  
-  export default Footer
+}
+
+export default Footer

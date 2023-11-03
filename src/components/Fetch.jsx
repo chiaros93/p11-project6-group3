@@ -26,14 +26,16 @@ function Catalogo() {
     useEffect(() => {
         getAlbum();
     }, []);
+
+    const displayAlbums= albumNames.slice(0, 8);
     
     return(
         <div id="catalogo">
             <h2>Lista de Álbumes</h2>
             <div className="getAlbums">
-                {albumNames.map((album) => (
-                <div key={album.id}>
-                    <img src={album.album.cover_medium} />
+                {displayAlbums.map((album) => (
+                <div key={album.id} className="card">
+                    <img src={album.album.cover_medium} className="cover"/>
                     <p>{album.title}</p>
                     <p>{album.artist.name}</p>
                     </div>
