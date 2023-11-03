@@ -1,0 +1,15 @@
+#catalogo{
+    width: 70%;
+    position: absolute;
+    right: 50px;
+    top: 100px;
+
+}
+
+.getAlbums{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
