@@ -1,9 +1,9 @@
 
-
 import './App.css'
 import Header from './components/Header';
 import Catalogo from './components/Fetch';
 import Botones from './components/Botones';
+import Search from './components/Search';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
     <Header />
     <Catalogo />
     <Botones />
+    <Search />
     </div>
   
   );
