@@ -1,9 +1,13 @@
 #catalogo{
-    width: 70%;
+    width: 68%;
     position: absolute;
-    right: 50px;
+    right: 20px;
     top: 90px;
+}
 
+h2{
+    display: flex;
+    justify-content: center;
 }
 
 .getAlbums{
