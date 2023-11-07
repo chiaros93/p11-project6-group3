@@ -1,10 +1,11 @@
-.logo{
+.logo {
     width: 20%;
     height: 20%;
     padding: 10px;
     margin-bottom: 10px;
 }
-.header{
+
+.header {
     background-color: #ffd695;
     width: 25vw;
     height: 100vh;
@@ -12,7 +13,8 @@
     padding: 20px;
     margin: 0px;
 }
-.containerLogo{
+
+.containerLogo {
     width: 100%;
     display: flex;
     justify-content: start;
@@ -21,7 +23,7 @@
     font-size: calc(2.5vw - .1em);
 }
 
-nav{
+nav {
     background-color: #fff193;
     color: rgb(114, 38, 5);
     width: 100%;
@@ -37,7 +39,7 @@ nav{
 
 }
 
-nav a{
+nav a {
     width: 50%;
     display: flex;
     margin-left: 25px;
@@ -45,14 +47,15 @@ nav a{
     text-decoration: none;
     color: rgb(114, 38, 5);
 }
-.search{
+
+.search {
     margin-right: 10px;
     border: none;
     background: none;
 }
-.activate-search{
+
+.activate-search {
     display: flex;
 }
-.br{
-    
-}
+
+.br {}

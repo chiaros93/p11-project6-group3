@@ -1,22 +1,23 @@
-#catalogo{
+#catalogo {
     width: 68%;
     position: absolute;
     right: 20px;
     top: 90px;
 }
 
-h2{
+h2 {
     display: flex;
     justify-content: center;
 }
 
-.getAlbums{
+.getAlbums {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
 }
-.card{
+
+.card {
     background-color: blanchedalmond;
     margin: 20px;
     border-radius: 5px;
@@ -29,7 +30,7 @@ h2{
     font-size: 15px;
 }
 
-.cover{
+.cover {
     width: 200px;
     height: 150px;
     object-fit: cover;
