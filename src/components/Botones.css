@@ -17,15 +17,18 @@
     font-family: sans-serif;
     font-weight: 900;
 }
-#btn1{
+
+#btn1 {
     color: white;
     display: flex;
     text-decoration: none;
     flex-direction: column;
 }
-#btn1:hover{
+
+#btn1:hover {
     color: rgb(255, 205, 232);
 }
+
 .iniciar {
     display: flex;
     justify-content: center;
@@ -33,22 +36,25 @@
     align-items: center;
     background: rgb(255, 205, 232);
     border: none;
-    border-radius: 22px; 
+    border-radius: 22px;
     font-family: sans-serif;
     font-weight: 900;
     font-size: calc(-.3vw + .7em);
     margin: 10px;
 }
-#btn{
+
+#btn {
     color: #ff8214;
     display: flex;
     text-decoration: none;
     flex-direction: column;
 }
-#btn:hover{
+
+#btn:hover {
     color: white;
     transition: 0.3s;
 }
+
 .iniciar:hover {
     background: #fff193;
     box-shadow: 0 0 10px #fff193, 0 0 20px #fff193, 0 0 60px #fff193;

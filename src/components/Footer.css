@@ -1,4 +1,4 @@
-#ftr{    
+#ftr {
     display: flex;
     min-height: 53vh;
     align-items: center;
@@ -19,7 +19,7 @@
     font-size: 0.7em;
 }
 
-.btn-language{
+.btn-language {
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -28,6 +28,6 @@
     color: #4e1a00;
 }
 
-#Global{
+#Global {
     margin-right: 10px;
 }

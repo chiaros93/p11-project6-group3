@@ -1,43 +1,43 @@
-import {useState } from "react"
+import { useState } from "react"
 import './Header.css'
-function Search (){
+function Search() {
     const [cancion, setCancion] = useState('');
     const [canciones, setCanciones] = useState([]);
 
-    function handleSearch(e){
+    function handleSearch(e) {
         e.preventDefault()
-        if(cancion.trim()  === '' ){
+        if (cancion.trim() === '') {
             alert('Debes ingresar algo');
             return
         }
         console.log(cancion)
         setCancion('')
         getSong(cancion)
-    }   
+    }
 
-    const options={
+    const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key':  'abe1b8885dmsh8dc7b1ce66dcca3p17e457jsn3c7d09b36c84',
+            'X-RapidAPI-Key': 'abe1b8885dmsh8dc7b1ce66dcca3p17e457jsn3c7d09b36c84',
             'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
         }
     }
 
 
-    async function getSong(){
+    async function getSong() {
         try {
             let url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${cancion}`
-            let data =await fetch(url, options)
+            let data = await fetch(url, options)
             let res = await data.json()
             setCanciones(res.data)
             console.log(res)
-            
+
         } catch (error) {
             console.log('Upss.. error', error)
         }
     }
 
-    return(
+    return (
         <>
         <form className="activate-search" action="action" onSubmit={handleSearch}>
             <button type="submit" className="search">
@@ -50,11 +50,11 @@ function Search (){
         </form>
             {canciones.map((cancion, index) => (
                 <>
-                <div key={index}>
-                    <img src={cancion.album.cover_medium} alt={cancion.title} />
-                    <h2>{cancion.title}</h2>
-                    <button onClick={()=> setSelectedSong(cancion.link)}>Play song</button>
-                </div>
+                    <div key={index}>
+                        <img src={cancion.album.cover_medium} alt={cancion.title} />
+                        <h2>{cancion.title}</h2>
+                        <button onClick={() => setSelectedSong(cancion.link)}>Play song</button>
+                    </div>
                 </>
             )
             )
