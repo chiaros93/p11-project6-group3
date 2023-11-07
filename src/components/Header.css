@@ -43,3 +43,14 @@ nav a{
     text-decoration: none;
     color: rgb(114, 38, 5);
 }
+.search{
+    margin-right: 10px;
+    border: none;
+    background: none;
+}
+.activate-search{
+    display: flex;
+}
+.br{
+    
+}
