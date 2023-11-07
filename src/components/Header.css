@@ -37,16 +37,18 @@ nav{
 
 }
 
-nav a{
+.ico-a{
     width: 50%;
     display: flex;
+    align-items: center;
     margin-left: 25px;
     gap: 30px;
     text-decoration: none;
     color: rgb(114, 38, 5);
 }
 .search{
-    margin-right: 10px;
+    margin-left: 19px;
+    margin-right: 20px;
     border: none;
     background: none;
 }
@@ -54,5 +56,16 @@ nav a{
     display: flex;
 }
 .br{
-    
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+input::placeholder{
+    display: flex;
+    color: rgb(114, 38, 5);
+    font-size: calc(1.5vw - .1em);
+    font-weight: 900;
 }
