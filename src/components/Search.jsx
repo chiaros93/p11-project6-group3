@@ -1,5 +1,5 @@
 import { useState } from "react"
-import './Header.css'
+import './Search.css'
 function Search() {
     const [cancion, setCancion] = useState('');
     const [canciones, setCanciones] = useState([]);
@@ -18,7 +18,7 @@ function Search() {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'abe1b8885dmsh8dc7b1ce66dcca3p17e457jsn3c7d09b36c84',
+            'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
             'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
         }
     }
