@@ -28,7 +28,7 @@ function Catalogo() {
     }, []);
 
     return (
-        <div id="catalogo">
+        <div className="catalogo">
             <h2>Lista de Álbumes</h2>
             <div className="getAlbums">
                 {albumNames.length > 0 ? (

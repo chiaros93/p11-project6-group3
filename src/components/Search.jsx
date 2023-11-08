@@ -48,17 +48,20 @@ function Search() {
             </button>
             <input type="text" placeholder="buscar" className="br" value={cancion} onChange={e => setCancion(e.target.value)} />
         </form>
-            {canciones.map((cancion, index) => (
-                <>
-                    <div key={index}>
-                        <img src={cancion.album.cover_medium} alt={cancion.title} />
-                        <h2>{cancion.title}</h2>
-                        <button onClick={() => setSelectedSong(cancion.link)}>Play song</button>
-                    </div>
-                </>
-            )
-            )
-            }
+            <div className="catalogo">
+                <div className="getAlbums">
+                {canciones.map((cancion, index) => (
+                    <>
+                        <div className="card" key={index}>
+                            <img src={cancion.album.cover_medium} className="cover" alt={cancion.title} />
+                            <h2>{cancion.title}</h2>
+                        </div>
+                    </>
+                )
+                )
+                }
+                </div>
+            </div>
         </>
     )
 }
