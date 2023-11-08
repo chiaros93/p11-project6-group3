@@ -1,6 +1,6 @@
 import Logo from '../assets/Fenix.png'
-import './Header.css'
-import Footer from './Footer';
+import './Sidebar.css'
+import Footer from './FooterSidebar';
 import Search from './Search';
 export {ContainerLogo}
 

@@ -1,6 +1,6 @@
-import Botones from "../components/Botones"
-import { ContainerLogo } from "../components/Header";
-import "../components/Header.css"
+import BottonProfile from "../components/BottonProfile"
+import { ContainerLogo } from "../components/Sidebar";
+import "../components/Sidebar.css"
 import Search from "../components/Search";
 
 function SecondPage(){
@@ -8,7 +8,7 @@ function SecondPage(){
         <div>
             <header>
                 <ContainerLogo />
-                <Botones />
+                <BottonProfile />
                 <Search />
             </header>
         </div>

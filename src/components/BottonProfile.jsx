@@ -1,4 +1,4 @@
-import './Botones.css'
+import './BottonProfile.css'
 
 function Botones() {
     return (

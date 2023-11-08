@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './Catalogo.css'
+import './CatalogoHomepage.css'
 
 function Catalogo() {
     const [albumNames, setAlbumNames] = useState([]);
