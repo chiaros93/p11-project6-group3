@@ -1,17 +1,17 @@
-
 import './App.css'
-import Header from './components/Header';
-import Catalogo from './components/Catalogo';
-import Botones from './components/Botones';
+import { Route, Routes } from 'react-router-dom';
+import Main from './pages/MainPage'
+import SecondPage from './pages/SecondPage';
+
 
 function App() {
   return (
-    <div className='caja1'>
-      <Header />
-      <Catalogo />
-      <Botones />
-    </div>
-
+    <>
+    <Routes>
+      <Route index Component={Main} />
+      <Route path='/pages/secondpage' Component={SecondPage} />
+    </Routes>
+    </>
   );
 }
 
