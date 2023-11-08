@@ -1,8 +1,13 @@
-# React + Vite
+# Proyecto de Música con API de Deezer con React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es parte del bootcamp de Front-end de FactoriaF5 y se trata de un sitio web de música que utiliza la API de Deezer para buscar y reproducir música. 
 
-Currently, two official plugins are available:
+Primera historia de usuario: "Quiero poder ver una lista de álbumes para elegir cuál escuchar"
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Lista de Álbumes
+Al acceder al sitio, los usuarios pueden ver una lista de álbumes disponibles.
+Cada álbum muestra su portada y título.
+
+Segunda historia de usuario: "
+2. Barra de Búsqueda
+Se ha implementado una barra de búsqueda que permite a los usuarios buscar artistas.

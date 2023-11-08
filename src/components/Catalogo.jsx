@@ -9,7 +9,7 @@ function Catalogo() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'abe1b8885dmsh8dc7b1ce66dcca3p17e457jsn3c7d09b36c84',
+                'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
                 'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
             }
         };
@@ -27,14 +27,12 @@ function Catalogo() {
         getAlbum();
     }, []);
 
-    const displayAlbums = albumNames.slice(0, 8);
-
     return (
         <div id="catalogo">
             <h2>Lista de Álbumes</h2>
             <div className="getAlbums">
                 {albumNames.length > 0 ? (
-                    displayAlbums.map((album) => (
+                    albumNames.slice(0,8).map((album) => (
                         <div key={album.id} className="card">
                             <img src={album.album.cover_medium} className="cover" alt="Album Cover" />
                             <p>{album.title}</p>
