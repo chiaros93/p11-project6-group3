@@ -48,7 +48,7 @@ function Search() {
             </button>
             <input type="text" placeholder="buscar" className="br" value={cancion} onChange={e => setCancion(e.target.value)} />
         </form>
-            <div>
+            <div className="ctg">
                 <div className="getAlbums">
                 {canciones.map((cancion, index) => (
                     <>
