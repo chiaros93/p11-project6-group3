@@ -1,4 +1,5 @@
 export default class DeezerApiService{
+    
     async getAlbums(accessToken){
         const url = 'https://deezerdevs-deezer.p.rapidapi.com/search?q=pop';
         const options = {
@@ -13,7 +14,6 @@ export default class DeezerApiService{
             const response = await fetch(url, options);
             const results = await response.json();
             return results.data
-            console.log(results); // asumiendo que los nombres de los álbumes están en la propiedad 'data'
         } catch (error) {
             console.error(error);
         }
@@ -33,8 +33,6 @@ export default class DeezerApiService{
             let data = await fetch(url, options);
             let res = await data.json();
             return res.data
-            console.log(res);
-
         } catch (error) {
             console.log('Upss.. error', error);
         }

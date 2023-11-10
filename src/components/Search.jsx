@@ -1,13 +1,33 @@
-import { useState, useEffect } from "react"
+import { useState} from "react"
 import './Search.css'
 import DeezerApiService from "../services/deezerApiService";
-import MusicPlayer from "./MusicPlayer";
+import Player from "@madzadev/audio-player";
 
-
-
-function Search({onSearchResult}) {
+function Search({}) {
     const [cancion, setCancion] = useState('');
     const [canciones, setCanciones] = useState([]);
+    const [tracks, setTracks] = useState([
+        {
+        url: "https://cdns-preview-a.dzcdn.net/stream/c-aaa5371eb02be6493e51919e2ee63603-6.mp3",
+        title: "Life is a Highway - El Kuchau",
+        tags:["Temazo"]
+    },
+    {
+        url: "https://cdns-preview-f.dzcdn.net/stream/c-feca60d18748299cd6dbd6c16dc69355-7.mp3",
+        title: "Blame It on the Boogie - The Jacksons",
+        tags:["El pequeño Maicol"]
+    },
+    {
+        url: "https://cdns-preview-a.dzcdn.net/stream/c-aceed0d1b1929558e54d9811675963d3-10.mp3",
+        title: "F* You - CeeLo Green",
+        tags:["Para los ex"]
+    },
+    {
+        url: "https://cdns-preview-c.dzcdn.net/stream/c-c9dcc5dffa3210c0a7dd4d7c37f84540-3.mp3",
+        title: "Highway to Hell - AC/DC",
+        tags:["Arte"]
+    }
+    ])
 
     function handleSearch(e) {
         e.preventDefault()
@@ -24,11 +44,20 @@ function Search({onSearchResult}) {
         let deezer = new DeezerApiService();
         deezer.getSong(import.meta.env.VITE_API_KEY, cancion)
         .then(r => {
-            console.log(r)
-            setCanciones(r)
+            console.log(r);
+            setCanciones(r);
+            const previews = extractPreviews(r);
+            setTracks(previews)
         })
-    }
 
+        function extractPreviews(data){
+            return data.map((cancion)=> ({
+                url: cancion.preview,
+                title: cancion.title + " - " + cancion.artist.name,
+                tags: ["Searched"]
+            }))
+        }
+    }
     return (
         <>
         <form className="activate-search" action="action" onSubmit={handleSearch}>
@@ -45,7 +74,7 @@ function Search({onSearchResult}) {
         </form>
             <div className="ctg">
             <div className="musicPlayer">
-                    <MusicPlayer />
+                    <Player trackList={tracks} includeSearch={false} />
                 </div>
                 <div className="getAlbums">
                 {canciones.map((cancion, index) => (
@@ -55,15 +84,11 @@ function Search({onSearchResult}) {
                             <h2>{cancion.title}</h2>
                         </div>
                     </>
-                )
-                )
-                }
+                ))}
                 </div>
-                
             </div>
         </>
     )
 }
-
-
 export default Search;
+

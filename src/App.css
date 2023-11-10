@@ -18,15 +18,7 @@ a .btn1{
   flex-direction: column;
 }
 
-
-
-
-
 a .btn1:hover{
   color: rgb(255, 205, 232);
   transition: 0.3s;
-}
-footer{
-  position: fixed;
-  bottom: 0;
 }
