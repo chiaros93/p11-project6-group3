@@ -1,30 +1,14 @@
 import React, { useState, useEffect } from "react";
 import './CatalogoHomepage.css'
+import DeezerApiService from "../services/deezerApiService";
 
 function Catalogo() {
     const [albumNames, setAlbumNames] = useState([]);
 
-    async function getAlbum() {
-        const url = 'https://deezerdevs-deezer.p.rapidapi.com/search?q=albums&index=10';
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
-                'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
-            }
-        };
-
-        try {
-            const response = await fetch(url, options);
-            const results = await response.json();
-            setAlbumNames(results.data); // asumiendo que los nombres de los álbumes están en la propiedad 'data'
-        } catch (error) {
-            console.error(error);
-        }
-    }
-
     useEffect(() => {
-        getAlbum();
+        let deezer = new DeezerApiService()
+        deezer.getAlbums(import.meta.env.VITE_API_KEY)
+        .then(a => setAlbumNames(a))
     }, []);
 
     return (
@@ -35,7 +19,7 @@ function Catalogo() {
                     albumNames.slice(0,8).map((album) => (
                         <div key={album.id} className="card">
                             <img src={album.album.cover_medium} className="cover" alt="Album Cover" />
-                            <p>{album.title}</p>
+                            <p></p>
                             <p>{album.artist.name}</p>
                         </div>
                     ))

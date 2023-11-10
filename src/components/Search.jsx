@@ -1,6 +1,10 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import './Search.css'
-function Search() {
+import DeezerApiService from "../services/deezerApiService";
+
+
+
+function Search({onSearchResult}) {
     const [cancion, setCancion] = useState('');
     const [canciones, setCanciones] = useState([]);
 
@@ -8,33 +12,20 @@ function Search() {
         e.preventDefault()
         if (cancion.trim() === '') {
             alert('Debes ingresar algo');
-            return
+            return;
         }
-        console.log(cancion)
-        setCancion('')
-        getSong(cancion)
+        console.log(cancion);
+        setCancion('');
+        getsong(cancion)
     }
 
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
-            'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
-        }
-    }
-
-
-    async function getSong() {
-        try {
-            let url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${cancion}`
-            let data = await fetch(url, options)
-            let res = await data.json()
-            setCanciones(res.data)
-            console.log(res)
-
-        } catch (error) {
-            console.log('Upss.. error', error)
-        }
+    async function getsong(){
+        let deezer = new DeezerApiService();
+        deezer.getSong(import.meta.env.VITE_API_KEY, cancion)
+        .then(r => {
+            console.log(r)
+            setCanciones(r)
+        })
     }
 
     return (
@@ -68,4 +59,6 @@ function Search() {
         </>
     )
 }
+
+
 export default Search;
