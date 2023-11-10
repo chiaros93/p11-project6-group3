@@ -7,6 +7,7 @@
 }
 
 .container-links-legal {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -16,18 +17,20 @@
 .container-links-legal a {
     text-decoration: none;
     color: #4e1a00;
-    font-size: 0.7em;
+    font-size: calc(1.1vw);
 }
 
 .btn-language {
+    width: 100%;
+    
     display: flex;
     align-items: center;
     background-color: transparent;
     border: none;
-    font-size: 0.8em;
+    font-size: calc(1.2vw);
     color: #4e1a00;
 }
 
 #Global {
-    margin-right: 10px;
+    margin-right: 10%;
 }

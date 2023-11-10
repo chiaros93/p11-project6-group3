@@ -1,9 +1,9 @@
 .logo{
     width: 80px;
-    height: 20%;
     padding: 10px;
     margin-bottom: 10px;
 }
+
 .header{
     background-color: #ffd695;
     width: 25vw;
@@ -12,13 +12,14 @@
     padding: 20px;
     margin: 0px;
 }
+
 .containerLogo{
     width: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
     color: rgb(114, 38, 5);
-    font-size: calc(2.5vw - .1em);
+    font-size: calc(2.5vw);
 }
 
 nav{
@@ -32,8 +33,6 @@ nav{
     justify-content: center;
     border-radius: 10px;
     gap: 30px;
-    /* box-shadow: 0 0 10px #fff193, 0 0 20px #fff193, 0 0 60px #fff193; */
-    font-size: calc(1.5vw - .1em);
-
+    font-size: calc(1.5vw);
 }
 
