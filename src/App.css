@@ -7,6 +7,10 @@ body{
   background-image: linear-gradient(to right, #ffe561 0%, #ff8b7e 100%);
 }
 
+h2{
+  color: rgb(114, 38, 5);
+}
+
 a .btn1{
   color: white;
   display: flex;
@@ -16,11 +20,13 @@ a .btn1{
 
 
 
-#catalogo{
-  color: rgb(114, 38, 5);
-}
+
 
 a .btn1:hover{
   color: rgb(255, 205, 232);
   transition: 0.3s;
+}
+footer{
+  position: fixed;
+  bottom: 0;
 }

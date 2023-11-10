@@ -20,7 +20,7 @@ export default class DeezerApiService{
     };
 
     async getSong(accessToken, text) {
-        let url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${text}&limit=10`;
+        let url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${text}&limit=12`;
         const options = {
             method: 'GET',
             headers: {

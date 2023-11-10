@@ -5,8 +5,9 @@ export {ContainerLogo}
 
 const ContainerLogo = ()=>(
     <div className="containerLogo">
+                
                 <img src={Logo} alt="Logo Spotify" className='logo' />
-                <p>Frontify</p>
+                <p><a href='/'>Frontify</a></p>
             </div>
 )
 

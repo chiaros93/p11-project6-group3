@@ -36,3 +36,8 @@ input::placeholder{
     font-size: calc(1.5vw - .1em);
     font-weight: 900;
 }
+input{
+    color: rgb(114, 38, 5);
+    font-size: 20px;
+    font-weight: bold;
+}

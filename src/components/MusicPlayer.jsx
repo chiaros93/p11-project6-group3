@@ -1,8 +1,4 @@
 import Player from "@madzadev/audio-player";
-import { useState } from "react";
-import Search from "./Search";
-
-
 
 const tracks=[
     {
@@ -28,20 +24,42 @@ const tracks=[
 ]
 
 
+const colors = `html {
+    --tagsBackground: #9440f3;
+    --tagsText: #ffffff;
+    --tagsBackgroundHoverActive: #2cc0a0;
+    --tagsTextHoverActive: #ffffff;
+    --searchBackground: #18191f;
+    --searchText: #ffffff;
+    --searchPlaceHolder: #575a77;
+    --playerBackground: #18191f;
+    --titleColor: #ffffff; 
+    --timeColor: #ffffff;
+    --progressSlider: #9440f3;
+    --progressUsed: #ffffff;
+    --progressLeft: #151616;
+    --volumeSlider: #9440f3;
+    --volumeUsed: #ffffff;
+    --volumeLeft:  #151616;
+    --playlistBackground: #18191f;
+    --playlistText: #575a77;
+    --playlistBackgroundHoverActive:  #18191f;
+    --playlistTextHoverActive: #ffffff;
+}`;
 
 function MusicPlayer(){
-    const [canciones, setCanciones] = useState("")
-    
     return(
         <>
 
         <Player
-        autoPlay={false}
+        autoplay={false}
         trackList={tracks}
         includeTags={true}
         includeSearch={false}
         showPlaylist={true}
         autoPlayNextTrack={true}
+
+        customColorScheme={colors}
         />
         </>
     )
